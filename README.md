@@ -1,1 +1,15 @@
-# Udacity-RoboND-Project-4-FollowMe-DeepLearning
+# FollowMe-DeepLearning-ComputerVision
+__**Purpose of Repisotry :**__
+The purpose of this excercise is to preform  semantic segmentation by using  a deep learning network that locates a particular human target within an image.This deep learning model that will allow a simulated quadcopter to follow around the person that it detects!
+
+## Programming Project 1 - PD Control of Quadrator height in 1-D
+
+__**Objective :**__ The goal of  this exercise is  to implement a PD controller to control the height of a quadrotor, as well
+as tune its gains. The controller only contains a Proportional and Derivate gain. In addition the input should
+have a rise time of less than 1s and a maximum overshoot of less than 5%.
+                                          
+ <p align="center"><img src="./Images/Project%201/1-D_Quadrotor.jpg" /></p>
+
+__**Results Obtained :**__
+
+ <p align="center"><img src="./Images/Project%201/pdcontrol_1d.gif" /></p>
