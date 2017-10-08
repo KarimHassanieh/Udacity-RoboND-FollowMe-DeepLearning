@@ -12,7 +12,7 @@ __Hyper Parameters :__
 
 __1x1 Convultions :__
 
-__ Fully Connected Layers :__
+__Fully Connected Layers :__
 
 __Encoding Layers :__
 
