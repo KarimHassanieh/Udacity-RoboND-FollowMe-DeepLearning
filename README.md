@@ -81,4 +81,5 @@ The below image shows the output of the training process. The model was trained 
 ## 3- Conclusions & Future Work : 
 
 While the result obtained is above what is required it can still be enhanced. More data can be collected to improve the accuracy of the nueral network. In addition more experimintation can be done on the hyper paremeters to obtain better results.
+
 Also the network can be further enhanced to track other then humans but also dogs, cats and other animals.However in order to do this more data has to be collected and obtained in order for the neural network to identify such objects. Once data is collected the network has to be retrained in order to accurently identify the new type of objects.
