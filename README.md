@@ -14,6 +14,19 @@ __Network Layers & Architecture :__
 
 The network architecture used is that of a fully conv
 
+
+
+
+__Encoding Layers :__
+
+An encoding layer is implemented to extract the features in the image 
+
+__1x1 Convultions :__
+
+__Fully Connected Layers :__
+
+__Decoding Layers :__
+
 __Hyper Parameters :__
 
 No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epoch  | Validation Steps | Workers
@@ -21,18 +34,13 @@ No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epo
 6 | 0.005 | 32 | 100 | 200| 50| 4
 
 
-__1x1 Convultions :__
 
-__Fully Connected Layers :__
 
-__Encoding Layers :__
-An encoding layer is implemented to extract the 
-__Decoding Layers :__
 
 ## 2- Training and Results : 
 
 __Setup :__
-The nueral network was initailly trained for 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
+The nueral network was initailly trained for 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances (p2.xlarge instance) were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
 
 __Results :__
 
