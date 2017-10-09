@@ -34,7 +34,7 @@ An encoding layer is implemented to extract the features and distictinve feature
 
 In terms of image manipulation downsampling an image will help extract the simple patterns in the input image and gradually learn the complex structure and shapes in deeper layers.
 
-__1x1 Convultions :__
+__1x1 Convolutions :__
 
 The 1x1 convolution is used to change the dimensionality in filter space (in our case at layer 4  from 128 to 256) while preserving the distinctive feature and charactecterstics of the previous encoded layer.
 
