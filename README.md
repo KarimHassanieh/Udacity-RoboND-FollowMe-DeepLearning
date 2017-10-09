@@ -24,11 +24,11 @@ __Network Layers & Architecture :__
 The network architecture used is that of a fully conv
 
 
-
+The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, the decoding stage.
 
 __Encoding Layers :__
 
-An encoding layer is implemented to extract the features in the image 
+An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64. The second layer we implement a filter of 12
 
 __1x1 Convultions :__
 
@@ -60,5 +60,5 @@ The below image shows the output of the training process. The model was trained 
 
 ## 3- Conclusions & Future Work : 
 
-While the result obtained is above what is required it can still be enhanced. More data can be collected to 
+While the result obtained is above what is required it can still be enhanced. More data can be collected to improve the accuracy of the nueral network. In addition more experimintation can be done on the hyper paremeters to obtain better results.
 
