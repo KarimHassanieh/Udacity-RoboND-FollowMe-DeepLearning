@@ -11,13 +11,13 @@ In addition to this report note that the html version of the notebook  and .h5 f
 
 | Layer Number       | Purpose       | Layer Size and Dimension          | Layer Depth  |
 | ------------- | ------------- |:-------------:| -----:|
-| Layer 1        | Input Layer-Image | 160 * 160 | 3 |
-| Layer 2       | Encoder 1 | 80 * 80 | 64 |
-| Layer 3       | Encoder 2 | 40 * 40 | 128|
-| Layer 4       | 1 x 1 layer | 20 * 20 | 256 |
-| Layer 5       | Decoder 1 | 40 * 40 | 128|
-| Layer 6       | Decoder 2 | 80 * 80 | 64 |
-| Layer 7       |Output Layer | 160 * 160 | 3 |
+| Layer 1        | Input Layer-Image | 160 x 160 | 3 |
+| Layer 2       | Encoder 1 | 80 x 80 | 64 |
+| Layer 3       | Encoder 2 | 40 x 40 | 128|
+| Layer 4       | 1 x 1 layer | 20 x 20 | 256 |
+| Layer 5       | Decoder 1 | 40 x 40 | 128|
+| Layer 6       | Decoder 2 | 80 x 80 | 64 |
+| Layer 7       |Output Layer | 160 x 160 | 3 |
 
 __Network Layers & Architecture :__
 
