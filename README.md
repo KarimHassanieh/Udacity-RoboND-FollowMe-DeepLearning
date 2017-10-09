@@ -9,6 +9,7 @@ The purpose of this excercise is to preform  semantic segmentation by developing
 __Network Layers & Architecture :__
 
 The network architecture used is that of a fully conv
+
 __Hyper Parameters :__
 
 No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epoch  | Validation Steps | Workers
