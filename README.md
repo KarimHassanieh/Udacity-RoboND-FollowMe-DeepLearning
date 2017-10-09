@@ -2,7 +2,7 @@
 
 ## Objective & Goal :
 
-The purpose of this excercise is to preform  object-human tracking by developing a deep learning network that locates a particular human target within an image.This deep learning model that will allow a simulated quadcopter to follow around the person that it detects!
+The purpose of this excercise is to preform  object-human tracking by developing a deep learning network that locates a particular human target within an image.This deep learning model  will allow a simulated quadcopter to follow around the person that it detects!
 
 ## Additional Submissions :
 In addition to this report note that the html version of the notebook  and .h5 files of the weights (in weights forlder) are submitted as part of this repository.
@@ -13,7 +13,7 @@ __Nueral Network  Architecture & Philosophy :__
 
 The network architecture used is that of a fully convlutional network.Such networks are widely used for object tracking in computer vision application and robotics. The reason an architecture of fully convultional network is chosen over previously used fully connected layer is because spatial information of where the object recognized in the image is preserved which is needed when tracking objects.
 
-The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, and the decoding stage. In the below table is a summary of each layer which has been found to be opitimal for our application after many expermintation. 
+The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, and the decoding stage. In the below table is a summary of the network architecture developed for our application. This architecture has been found to be opitimal for our application after many expermintation. 
 
 | Layer Number       | Purpose       | Layer Size and Dimension          | Layer Depth  |
 | ------------- | ------------- |:-------------:| -----:|
@@ -30,7 +30,7 @@ The fully convultional nueral network is composed of 3 main stages, the encoding
 
 __Encoding Layers :__
 
-An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64 (layer 2). The second layer we implement a kernel size of 128 and decreasing its size by half as well (layer 3).
+An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64 (layer 2). The second layer we implement a filter size of 128 and decreasing its size by half as well (layer 3).
 
 __1x1 Convultions :__
 The 1x1 convolution is used to change the dimensionality in filter space (in our case at layer 4  from 128 to 256) while preserving the distinctive feature and charactecterstics of the previous encoded layer.
@@ -49,7 +49,7 @@ __Skip Connections :__
 
 __Hyper Parameters :__
 
-The needed hyper parameters were tuned by expermintation. Iniitally the learning was 0.01 however despite the fact that the training process was faster however the accuracy scoring was lower then 40%. Thurefore the learning rate  was decreased to 0.005 at the cost of the computing speed for the training process. Also it was noted that based on the learning rate of 0.005 increasing the numner of epochs helped increase the accuracy of the model.Thurefore  the number of epochs was experminted and found to be optimal at 100 (initailly 5).
+The needed hyper parameters were tuned by expermintation. Iniitally the learning was 0.01 however despite the fact that the training process was faster however the accuracy scoring was lower then 40%. Thurefore the learning rate  was decreased to 0.005 at the cost of the computing speed for the training process. Also it was noted that based on the learning rate of 0.005 increasing the number of epochs helped increase the accuracy of the model.Thurefore  the number of epochs was experminted and found to be optimal at 100 (initailly 5).
 
 No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epoch  | Validation Steps | Workers
 --- | --- | --- | --- | ---| --- | ---
@@ -62,13 +62,13 @@ No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epo
 ## 2- Training and Results : 
 
 __Setup :__
-The nueral network was initailly trained for 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances (p2.xlarge instance) were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
+The nueral network was initailly trained on a processor of Intel® Core™ i7-7500U CPU @ 2.70GHz × 4. For 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances (p2.xlarge instance) were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
 
 __Results :__
 
 The final accuracy result received based on the above mentioned hyperparameters was __41.8%__ which is above the required passing score of 40%. However this result can be further improved. 
 
-The below image shows the output of the training process. The model was trained for 100 epochs using AWS instances. T
+The below image shows the output of the training process. The model was trained for 100 epochs using AWS instances. 
 <p align="center"><img src="./Images/result.png" /></p>
 
 ## 3- Conclusions & Future Work : 
