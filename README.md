@@ -10,6 +10,11 @@ __Network Layers & Architecture :__
 
 __Hyper Parameters :__
 
+No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epoch  | Validation Steps | Workers
+--- | --- | --- | --- | ---| --- | ---
+6 | 0.005 | 32 | 100 | 200| 50| 4
+
+
 __1x1 Convultions :__
 
 __Fully Connected Layers :__
