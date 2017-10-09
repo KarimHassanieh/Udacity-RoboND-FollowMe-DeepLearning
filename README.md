@@ -26,7 +26,7 @@ The fully convultional nueral network is composed of 3 main stages, the encoding
 | Layer 7       |Output Layer | 160 x 160 | 3 |
 
 
-<p align="center"><img src="./Images/archi.jpg" /></p>
+#<p align="center"><img src="./Images/archi.jpg" /></p>
 
 __Encoding Layers :__
 
