@@ -33,6 +33,7 @@ __Encoding Layers :__
 An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64 (layer 2). The second layer we implement a filter size of 128 and decreasing its size by half as well (layer 3).
 
 __1x1 Convultions :__
+
 The 1x1 convolution is used to change the dimensionality in filter space (in our case at layer 4  from 128 to 256) while preserving the distinctive feature and charactecterstics of the previous encoded layer.
 
 
@@ -42,6 +43,7 @@ Decoding layers are implemented at the end of the neural network model to retrei
 The first decoding layer is then convluted with a filter of depth 128 (layer 5) while the second decoding layer is then convoluted again with a filter of depth 64 (layer 6). In such method the layer depth decreases from one layer to another. Also in each decoding the image is upsampled by a factor of 2 to retreive the spatial information.
 
 __Skip Connections :__
+
  Skip connections are implemented among non-adjacent layers to maintain information which could have been lost as result of the encoding stage. In our case there are 3 connections.
  The first connection is between the first and last layers. 
  The second connection is between Layer 2 with layer 6. 
@@ -62,6 +64,7 @@ No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epo
 ## 2- Training and Results : 
 
 __Setup :__
+
 The nueral network was initailly trained on a processor of Intel® Core™ i7-7500U CPU @ 2.70GHz × 4. For 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances (p2.xlarge instance) were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
 
 __Results :__
