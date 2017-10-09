@@ -26,4 +26,6 @@ __Decoding Layers :__
 
 ## 2- Training and Results : 
 
+<p align="center"><img src="./Images/result.png" /></p>
+
 ## 3- Conclusions : 
