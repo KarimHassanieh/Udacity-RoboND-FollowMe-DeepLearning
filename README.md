@@ -13,7 +13,7 @@ __Nueral Network  Architecture & Philosophy :__
 
 The network architecture used is that of a fully convlutional network.Such networks are widely used for object tracking in computer vision application and robotics. The reason an architecture of fully convultional network is chosen over previously used fully connected layer is because spatial information of where the object recognized in the image is preserved which is needed when tracking objects.
 
-The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, and the decoding stage. In the below table is a summary of each 
+The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, and the decoding stage. In the below table is a summary of each layer which has been found to be opitimal for our application after many expermintation. 
 
 | Layer Number       | Purpose       | Layer Size and Dimension          | Layer Depth  |
 | ------------- | ------------- |:-------------:| -----:|
@@ -26,25 +26,30 @@ The fully convultional nueral network is composed of 3 main stages, the encoding
 | Layer 7       |Output Layer | 160 x 160 | 3 |
 
 
-#<p align="center"><img src="./Images/archi.jpg" /></p>
+
 
 __Encoding Layers :__
 
-An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64. The second layer we implement a kernel size of 128 and decreasing its size by half as well.
+An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64 (layer 2). The second layer we implement a kernel size of 128 and decreasing its size by half as well (layer 3).
 
 __1x1 Convultions :__
-
+The 1x1 convolution is used to change the dimensionality in filter space (in our case at layer 4  from 128 to 256) while preserving the distinctive feature and charactecterstics of the previous encoded layer.
 
 
 __Decoding Layers :__
 
-Decoding layers are implemented at the end of the neural network model to retreive spatial infromation, to locate the recognized object in the image, such necessary infromation may have been lost due to the encoding and downsizing of the image. During decoding stage bileniar upsampling by 2 is preformed through 2 different decoding layers.
-The first decoding layer is then convluted with a filter of depth 128 while the second decoding layer is then convoluted again with a filter of depth 64. In such method the layer depeth decreasaes from one layer to another. Also in each decoding the image is upsampled by a factor of 2 to retreive the spatial information.
+Decoding layers are implemented at the end of the neural network model to retreive spatial infromation,in our case to locate the recognized object's location in the image, such necessary infromation may have been lost due to the encoding and downsizing of the image. During decoding stage bileniar upsampling by 2 is preformed through 2 different decoding layers.
+The first decoding layer is then convluted with a filter of depth 128 (layer 5) while the second decoding layer is then convoluted again with a filter of depth 64 (layer 6). In such method the layer depth decreases from one layer to another. Also in each decoding the image is upsampled by a factor of 2 to retreive the spatial information.
 
-__Fully Connected Layers :__
- 
+__Skip Connections :__
+ Skip connections are implemented among non-adjacent layers to maintain information which could have been lost as result of the encoding stage. In our case there are 3 connections.
+ The first connection is between the first and last layers. 
+ The second connection is between Layer 2 with layer 6. 
+ Finally a third connection exists between Layer 3 and Layer 5.
 
 __Hyper Parameters :__
+
+The needed hyper parameters were tuned by expermintation. Iniitally the learning was 0.01 however despite the fact that the training process was faster however the accuracy scoring was lower then 40%. Thurefore the learning rate  was decreased to 0.005 at the cost of the computing speed for the training process. Also it was noted that based on the learning rate of 0.005 increasing the numner of epochs helped increase the accuracy of the model.Thurefore  the number of epochs was experminted and found to be optimal at 100 (initailly 5).
 
 No of Parameters | Learning Rate | Batch Size | Number of Epochs | Steps Per Epoch  | Validation Steps | Workers
 --- | --- | --- | --- | ---| --- | ---
