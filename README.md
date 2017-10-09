@@ -28,13 +28,15 @@ The fully convultional nueral network is composed of 3 main stages, the encoding
 
 __Encoding Layers :__
 
-An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64. The second layer we implement a filter of 12
+An encoding layer is implemented to extract the features and distictinve features in the image. In principal encoding layers can be used mainly for object recognition in an image. In our implementation 2 encoding layer have been used. The first layer takes an image of 3 layers (R-G-B) and ouputs a layer of depth 64. The second layer we implement a kernel size of 128 and decreasing its size by half as well.
 
 __1x1 Convultions :__
 
 __Fully Connected Layers :__
 
 __Decoding Layers :__
+
+Decoding layers are implemented at the end of the neural network model to retreive spatial infromation, to locate the recognized object in the image, such necessary infromation may have been lost due to the encoding and downsizing of the image.
 
 __Hyper Parameters :__
 
