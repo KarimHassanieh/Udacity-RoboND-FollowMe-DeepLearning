@@ -9,6 +9,12 @@ In addition to this report note that the html version of the notebook  and .h5 f
 
 ## 1- Network Architecture : 
 
+__Nueral Network  Architecture & Philosophy :__
+
+The network architecture used is that of a fully convlutional network.Such networks are widely used for object tracking in computer vision application and robotics. The reason an architecture of fully convultional network is chosen over previously used fully connected layer is because spatial information of where the object recognized in the image is preserved which is needed when tracking objects.
+
+The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, and the decoding stage. In the below table is a summary of each 
+
 | Layer Number       | Purpose       | Layer Size and Dimension          | Layer Depth  |
 | ------------- | ------------- |:-------------:| -----:|
 | Layer 1        | Input Layer-Image | 160 x 160 | 3 |
@@ -19,12 +25,8 @@ In addition to this report note that the html version of the notebook  and .h5 f
 | Layer 6       | Decoder 2 | 80 x 80 | 64 |
 | Layer 7       |Output Layer | 160 x 160 | 3 |
 
-__Network Layers & Architecture :__
-
-The network architecture used is that of a fully conv
 
 
-The fully convultional nueral network is composed of 3 main stages, the encoding stage, the implementation of 1x1 convultional layer, the decoding stage.
 
 __Encoding Layers :__
 
@@ -32,11 +34,15 @@ An encoding layer is implemented to extract the features and distictinve feature
 
 __1x1 Convultions :__
 
-__Fully Connected Layers :__
+
 
 __Decoding Layers :__
 
-Decoding layers are implemented at the end of the neural network model to retreive spatial infromation, to locate the recognized object in the image, such necessary infromation may have been lost due to the encoding and downsizing of the image.
+Decoding layers are implemented at the end of the neural network model to retreive spatial infromation, to locate the recognized object in the image, such necessary infromation may have been lost due to the encoding and downsizing of the image. During decoding stage bileniar upsampling by 2 is preformed through 2 different decoding layers.
+The first decoding layer is then convluted with a filter of depth 128 while the second decoding layer is then convoluted again with a filter of depth 64. In such method the layer depeth decreasaes from one layer to another. Also in each decoding the image is upsampled by a factor of 2 to retreive the spatial information.
+
+__Fully Connected Layers :__
+ 
 
 __Hyper Parameters :__
 
