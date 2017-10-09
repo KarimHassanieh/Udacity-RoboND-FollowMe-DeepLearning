@@ -4,7 +4,11 @@
 
 The purpose of this excercise is to preform  semantic segmentation by developing a deep learning network that locates a particular human target within an image.This deep learning model that will allow a simulated quadcopter to follow around the person that it detects!
 
+## Additional Submissions :
+In addition to this report note that the html version of the notebook  and .h5 files of the weights (in weights forlder) are submitted as part of this repository.
+
 ## 1- Network Architecture : 
+
 
 __Network Layers & Architecture :__
 
@@ -32,9 +36,12 @@ The nueral network was initailly trained for 5 epochs on the local computer (Tra
 
 __Results :__
 
-The final accuracy result received based on the above mentioned hyperparameters was __41.8%__ which is above 
+The final accuracy result received based on the above mentioned hyperparameters was __41.8%__ which is above the required passing score of 40%. However this result can be further improved. 
 
 The below image shows the output of the training process. The model was trained for 100 epochs using AWS instances. T
 <p align="center"><img src="./Images/result.png" /></p>
 
 ## 3- Conclusions & Future Work : 
+
+While the result obtained is above what is required it can still be enhanced. More data can be collected to 
+
