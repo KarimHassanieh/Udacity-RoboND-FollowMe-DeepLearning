@@ -22,11 +22,19 @@ __1x1 Convultions :__
 __Fully Connected Layers :__
 
 __Encoding Layers :__
-
+An encoding layer is implemented to extract the 
 __Decoding Layers :__
 
 ## 2- Training and Results : 
 
+__Setup :__
+The nueral network was initailly trained for 5 epochs on the local computer (Training time took 3 hours) and initially acheived a result of 36% accuracy. However it was evident that the number of epochs had to increase to improve the accuracy of the model. In order to speed up the training process AWS instances were used and for 100 epochs. Training with AWS for 100 epochs took around 4 hours to complete.  
+
+__Results :__
+
+The final accuracy result received based on the above mentioned hyperparameters was 41.8% which is above 
+
+The below image shows the output of the training process. The model was trained for 100 epochs using AWS instances. T
 <p align="center"><img src="./Images/result.png" /></p>
 
 ## 3- Conclusions : 
