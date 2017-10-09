@@ -32,7 +32,7 @@ The nueral network was initailly trained for 5 epochs on the local computer (Tra
 
 __Results :__
 
-The final accuracy result received based on the above mentioned hyperparameters was 41.8% which is above 
+The final accuracy result received based on the above mentioned hyperparameters was __41.8%__ which is above 
 
 The below image shows the output of the training process. The model was trained for 100 epochs using AWS instances. T
 <p align="center"><img src="./Images/result.png" /></p>
