@@ -2,7 +2,7 @@
 
 ## Objective & Goal :
 
-The purpose of this excercise is to preform  semantic segmentation by developing a deep learning network that locates a particular human target within an image.This deep learning model that will allow a simulated quadcopter to follow around the person that it detects!
+The purpose of this excercise is to preform  object-human tracking by developing a deep learning network that locates a particular human target within an image.This deep learning model that will allow a simulated quadcopter to follow around the person that it detects!
 
 ## Additional Submissions :
 In addition to this report note that the html version of the notebook  and .h5 files of the weights (in weights forlder) are submitted as part of this repository.
