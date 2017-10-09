@@ -9,6 +9,16 @@ In addition to this report note that the html version of the notebook  and .h5 f
 
 ## 1- Network Architecture : 
 
+| layers        | dimension           | depth  |
+| ------------- |:-------------:| -----:|
+| input layer | 160 * 160 | 3 |
+| encoder 1 | 80 * 80 | 128 |
+| encoder 2 | 40 * 40 | 64 |
+| encoder 3 | 20 * 20 | 32 |
+| 1 x 1 layer | 20 * 20 | 32 |
+| decoder 1 | 40 * 40 | 32 |
+| decoder 2 | 80 * 80 | 64 |
+| decoder 3 | 160 * 160 | 128 |
 
 __Network Layers & Architecture :__
 
